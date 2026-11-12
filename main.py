@@ -62,6 +62,11 @@ def salva_dati():
         text=f"Nome: {nome_inserito} | Quantità: {quantita_inserita}"
     )
 
+def mostra():
+    risultato.configure(
+        text=f"Ciao",  
+    )
+
 # Pulsante SALVA
 pulsante = ctk.CTkButton(
     app,
@@ -71,6 +76,16 @@ pulsante = ctk.CTkButton(
     command=salva_dati
 )
 pulsante.pack(pady=10)
+
+# Pulsante SALVA
+pulsante1 = ctk.CTkButton(
+    app,
+    text="Mostra ",
+    width=200,
+    height=40,
+    command=mostra
+)
+pulsante1.pack(pady=10)
 
 # Avvio applicazione
 app.mainloop()
